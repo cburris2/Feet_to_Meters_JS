@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+HTML 5, JavaScript and CSS updated 2/22/2016 by Charles Burris 
+-->
+<html>
+    <head>
+        <title>Simple Conversion Ft - M</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> 
+        input#ft{
+            border-radius:10px 10px 10px 10px;
+            -webkit-border-radius:10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            height:18px;
+            padding: 10px;
+            border: solid 1px #dcdcdc;
+            transition: box-shadow 0.3s, border 0.3s;
+            
+        }    
+        input#ft:focus, input#ft:hover{
+             border-radius:10px 10px 10px 10px;
+             -webkit-border-radius:10px 10px 10px 10px;
+             -moz-border-radius: 10px 10px 10px 10px;
+             border: solid 1px #707070;
+             box-shadow: 0 0 5px 1px #969696
+            
+            
+        }
+        button#cb{
+            border-radius:8px 8px 8px 8px;
+            -webkit-border-radius:8px 8px 8px 8px;
+            -moz-border-radius: 8px 8px 8px 8px;
+            height:40px;
+            padding: 8px;
+            border: solid 1px #dcdcdc;
+            transition: box-shadow 0.3s, border 0.3s;
+            
+        }    
+        button#cb:focus, button#cb:hover{
+             border-radius:8px 8px 8px 8px;
+            -webkit-border-radius:8px 8px 8px 8px;
+            -moz-border-radius: 8px 8px 8px 8px;
+             border: solid 1px #707070;
+             box-shadow: 0 0 5px 1px #969696
+            
+            
+        }
+        
+        </style>  
+    </head> 
+   
+    <body>
+        <div> <h2>Converting feet to meters </h2>
+            
+            <input style ="" type="text" name ="ft" id="ft" placeholder="Enter a number of feet ">
+            <button onclick="convert()" name="cb" id="cb">Convert</button>
+        
+       
+          
+         </div>
+        <script>
+            // Creat a function 
+            function convert(){
+                //intialize variable ft to user input value 
+                var ft = document.getElementById("ft").value;
+                
+                //Convert the input from ft to meters
+                var m = ft * 0.3048;
+                
+                //set the result paragraph to display answer
+                document.getElementById("result").innerHTML = m + " m";
+                document.getElementById("re_entry").innerHTML = "You can re-enter another number to see its conversion result. "
+            }
+            
+            
+            </script>
+            <p id="result"> Answer in meters will show here.
+            
+            
+            </p>
+            <p id="re_entry"> ------- Copyright 2016 -------
+            
+            
+            </p>
+          
+    </body>
+</html>
